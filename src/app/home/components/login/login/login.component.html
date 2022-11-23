@@ -1,0 +1,36 @@
+<!-- <p>login works!</p> -->
+<!-- <h2 mat-dialog-title>Install Angular</h2>-->
+<!-- <mat-dialog-content class="mat-typography"> -->
+<div class="login-container">
+  <div class="login-first">
+    <span class="login-first-title">Login</span>
+    <p><span class="login-first-msg">Get access to your Orders, Wishlist and Recommendations</span></p>
+    <img src="./assets/login.png">
+  </div>
+
+  <div class="login-content">
+    <mat-form-field appearance="fill" class="login-content-field">
+      <mat-label>Enter Email/Mobile number</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="login-content-field">
+      <mat-label>Enter Password</mat-label>
+      <input matInput type="password">
+    </mat-form-field>
+
+    <p>By continuing,you agree to Flipkart's</p><a href="#" style="text-decoration:none;">Terms of Use</a> and <a
+      href="#" style="text-decoration:none;">Policy</a>
+
+    <button mat-raised-button color="warn" class="login-content-btn">Login</button>
+    <div>or</div>
+    <button mat-raised-button color="warn" class="login-content-btn-otp">Request OTP</button>
+
+    <a href="#" style="text-decoration:none;">New to Flipkart? Create an account</a>
+
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <!-- <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button> -->
+    </mat-dialog-actions>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+[
+  {
+    "brand": "redme",
+    "avatar": "/assets/mob-images/mob1.jpeg",
+    "speciality": "double damaka deal",
+    "model": "Redme 10",
+    "price": "9499",
+    "features": {
+      "display": "Smart FHD+",
+      "battery?": "6000mah"
+    }
+  },
+  {
+    "brand": "samsung",
+    "avatar": "/assets/mob-images/mob2.jpeg",
+    "speciality": "samsung bestseller under 11K",
+    "model": "Samsung F13",
+    "price": "10249",
+    "features": {
+      "display": "6.6'FHD",
+      "cam?": "50MP"
+    }
+  },
+  {
+    "brand": "realme",
+    "avatar": "/assets/mob-images/mob3.jpeg",
+    "speciality": "1st fingerprint sensonr under 8k",
+    "model": "Realme C30S",
+    "price": "6299",
+    "features": {
+      "display": "6.5' FHD"
+    }
+  }
+]

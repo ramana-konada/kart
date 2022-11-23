@@ -1,0 +1,112 @@
+<!-- <p>filter works!</p> -->
+<!-- <div style="width:100%"></div> -->
+<div class="dashBoard">
+  <div class="das-container-common">Filter</div>
+  <div class="das-container-common">categories<br>
+    <a href="#">Mobiles</a>
+  </div>
+  <div class="das-container-common">
+    <div>PRICE</div>
+    <mat-slider aria-label="unit(s)"></mat-slider><br>
+    <select (change)="customerPriceChange($event, 'min')">
+      <option value="0">MIN</option>
+      <option value="10000">10000</option>
+      <option value="15000">15000</option>
+      <option value="20000">20000</option>
+      <option value="30000">30000</option>
+    </select>
+    <span>to</span>
+    <select (change)="customerPriceChange($event, 'max')">
+      <option value="30000">30000+</option>
+      <option value="30000">30000</option>
+      <option value="20000">20000</option>
+      <option value="15000">15000</option>
+      <option value="10000">10000</option>
+    </select>
+  </div>
+  <div class="das-container-common">BRAND
+    <div>
+      <input type="checkbox">
+      <label>samsung</label>
+    </div>
+  </div>
+  <div class="das-container-common">
+    <input type="checkbox">
+    <label>F Assured</label>
+  </div>
+  <div class="das-container-common">CUSTOMER RATING
+    <div>
+      <input type="checkbox" (change)="customerRatingChange($event, 4)">
+      <label>4 & Above</label>
+    </div>
+    <div>
+      <input type="checkbox" (change)="customerRatingChange($event, 3)">
+      <label>3 & Above</label>
+    </div>
+  </div>
+  <div class="das-container-common"> DISCOUNT
+    <div>
+      <input type="checkbox" value="10%" (change)="discountChange($event, 10)">
+      <label>10%</label>
+    </div>
+    <div>
+      <input type="checkbox" value="20%" (change)="discountChange($event, 20)">
+      <label>20%</label>
+    </div>
+    <div>
+      <input type="checkbox" value="30%" (change)="discountChange($event, 30)">
+      <label>30%</label>
+    </div>
+    <div>
+      <input type="checkbox" value="40%" (change)="discountChange($event, 40)">
+      <label>40%</label>
+    </div>
+    <div>
+      <input type="checkbox" value="50%" (change)="discountChange($event, 50)">
+      <label>50%</label>
+    </div>
+  </div>
+  <div class="das-container-common">BATTERY CAPACITY
+    <div>
+      <input type="checkbox" (change)="checkedBattery($event,8000)">
+      <label>6000mAh & above</label>
+    </div>
+  </div>
+  <div class="das-container-common">RAM
+    <div>
+      <input type="checkbox">
+      <label>4GB</label>
+    </div>
+  </div>
+  <div class="das-container-common">INTERNAL STORAGE
+    <div>
+      <input type="checkbox">
+      <label>4GB</label>
+    </div>
+  </div>
+
+  <div class="das-container-common">SCREEN SIZE
+    <div>
+      <input type="checkbox">
+      <label>6.4 inch & Above</label>
+    </div>
+  </div>
+  <div class="das-container-common">PRIMARY CAMERA
+    <div>
+      <input type="checkbox">
+      <label>48-63.5MP</label>
+    </div>
+  </div>
+  <div class="das-container-common">SECONDARY CAMERA
+    <div>
+      <input type="checkbox">
+      <label>8-11.9MP</label>
+    </div>
+  </div>
+  <div class="das-container-common">GST INVOICE AVAILBLE
+    <div>
+      <input type="checkbox">
+      <label>GST invoice availble</label>
+    </div>
+  </div>
+</div>

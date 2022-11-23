@@ -1,0 +1,12 @@
+[
+  { "label": "Top Offers", "classname": "top-offers", "route": "" },
+  { "label": "Grociers", "classname": "grociers", "route": "" },
+  { "label": "Mobiles", "classname": "mobiles", "route": "/mobiles-store" },
+  { "label": "Fashion", "classname": "fashion", "route": "" },
+  { "label": "Electronics", "classname": "electronics", "route": "" },
+  { "label": "Home", "classname": "home", "route": "" },
+  { "label": "Appliances", "classname": "appliances", "route": "" },
+  { "label": "Travel", "classname": "travel", "route": "" },
+  { "label": "Beauty,Toys & More", "classname": "beauty", "route": "" },
+  { "label": "2-Wheelers", "classname": "wheelers", "route": "" }
+]

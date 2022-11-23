@@ -1,0 +1,91 @@
+<!-- <span>menu_header Page</span> -->
+<div class="products-container">
+  <div class="icon-nav-container ">
+    <div [routerLink]="item.route" *ngFor="let item of categories">
+
+      <!-- <button class="dropbtn">Dropdown</button> -->
+
+
+      <!-- <div class="dropdown">
+        <button class="dropbtn">
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div> -->
+      <div class="icons" [ngClass]="item.classname"></div>
+      <div class="icon-label">{{ item.label }}</div>
+      <!-- </button>
+      </div> -->
+    </div>
+    <!-- <button (click)="mobileRoute()">click</button> -->
+
+  </div>
+
+  <div class="category-list">
+    <div class="category-card" *ngIf="beautyCard">
+      <div>
+        <div>{{beautyCard.categoryName}}</div>
+        <img [src]="beautyCard.categoryImage" class="category-card-left-image">
+      </div>
+
+      <div class="category-card-seperate">
+        <div class="category-card-list" *ngFor="let item of beautyCard.products | formatPipe: '1'">
+          <img [src]="item.imageUrl" class="category-card-image">
+          <div>{{item.name}}</div>
+          <div>{{item.percentageText}}</div>
+          <div>{{item.availableBrands}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card" *ngIf="festiveCard">
+      <div>
+        <!-- <div>{{beautyCard.categoryId}}</div> -->
+        <div>{{festiveCard.categoryName}}</div>
+        <img [src]="festiveCard.categoryImage" class="category-card-left-image">
+      </div>
+
+      <div class="category-card-seperate">
+        <div class="category-card-list" *ngFor="let item of festiveCard.products">
+          <img [src]="item.imageUrl" class="category-card-image">
+          <div>{{item.name}}</div>
+          <div>{{item.percentageText}}</div>
+          <div>{{item.availableBrands}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card" *ngIf="winterCard">
+      <div>
+        <div>{{winterCard.categoryName}}</div>
+        <img [src]="winterCard.categoryImage" class="category-card-left-image">
+      </div>
+
+      <div class="category-card-seperate">
+        <div class="category-card-list" *ngFor="let item of winterCard.products">
+          <img [src]="item.imageUrl" class="category-card-image">
+          <div>{{item.name}}</div>
+          <div>{{item.percentageText}}</div>
+          <div>{{item.availableBrands}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card" *ngIf="sportsCard">
+      <div>
+        <div>{{sportsCard.categoryName}}</div>
+        <img [src]="sportsCard.categoryImage" class="category-card-left-image">
+      </div>
+
+      <div class="category-card-seperate">
+        <div class="category-card-list" *ngFor="let item of sportsCard.products">
+          <img [src]="item.imageUrl" class="category-card-image">
+          <div>{{item.name}}</div>
+          <div>{{item.percentageText}}</div>
+          <div>{{item.availableBrands}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

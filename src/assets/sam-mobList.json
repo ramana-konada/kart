@@ -1,0 +1,44 @@
+[
+  {
+    "mobile": {
+      "image": "/assets/mob-images/sam-images/sam-img1.jpeg",
+      "brand": "SAMSUNG Galaxy F13(Waterfall Blue,64GB)",
+      "storage": "4GB RAM | 64GB | Expandable Upto 1 TB",
+      "display": "16.76cm HD+ Display ",
+      "camera": "50MP+5MP+2MP | 8MP Front Camera",
+      "battery": 5000
+    },
+    "rating": 4.0,
+    "review": "88053",
+    "price": 26999,
+    "discount": 26
+  },
+  {
+    "mobile": {
+      "image": "/assets/mob-images/sam-images/sam-img2.jpeg",
+      "brand": "SAMSUNG Galaxy F13(Sunrise Copper,64GB)",
+      "storage": "4GB RAM | 64GB | Expandable Upto 1 TB",
+      "display": "16.76cm HD+ Display ",
+      "camera": "50MP+5MP+2MP | 8MP Front Camera",
+      "battery": 7000
+    },
+    "rating": 4.3,
+    "review": "88053",
+    "price": 15999,
+    "discount": 56
+  },
+  {
+    "mobile": {
+      "image": "/assets/mob-images/sam-images/sam-img3.jpeg",
+      "brand": "SAMSUNG Galaxy F13(Nightsky Green,64GB)",
+      "storage": "4GB RAM | 64GB | Expandable Upto 1 TB",
+      "display": "16.76cm HD+ Display ",
+      "camera": "50MP+5MP+2MP | 8MP Front Camera",
+      "battery": 9000
+    },
+    "rating": 4.9,
+    "review": "88053",
+    "price": 29999,
+    "discount": 10
+  }
+]

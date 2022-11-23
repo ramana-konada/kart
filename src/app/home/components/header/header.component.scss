@@ -1,0 +1,50 @@
+:host {
+  .header-container {
+    width: 100%;
+    .tool-container {
+      background-color: #2874f0;
+      color: white;
+      display: flex;
+      justify-content: center;
+      .tool-bar {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        .forPlus {
+          color: #ffe500;
+          font-weight: 500;
+          margin-right: 2px;
+        }
+        .forInputs {
+          padding: 0 16px;
+          border-radius: 2px 0 0 2px;
+          border: 0;
+          outline: 0 none;
+          font-size: 14px;
+          height: 36px;
+          width: 100%;
+        }
+        .for-login {
+          color: #2874f0;
+          width: 20%;
+          font-size: 16px;
+          cursor: pointer;
+          border: white;
+        }
+        .for-links {
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .login-dialog {
+    .mat-dialog-container {
+      padding: 0;
+    }
+  }
+}

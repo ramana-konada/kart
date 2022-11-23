@@ -1,0 +1,14 @@
+<!-- <p>products works!</p> -->
+<div class="firstScroll">
+
+
+  <div *ngIf="productsList"></div>
+
+  <div *ngFor="let items of productsList?.products">
+    <div class="forNum">{{items.id}}</div>
+    <!-- <div>{{items.imageUrl}}</div> -->
+    <div>{{items.name}}</div>
+    <div>{{items.percentageText}}</div>
+    <div>{{items.availableBrands}}</div>
+  </div>
+</div>

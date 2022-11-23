@@ -1,0 +1,55 @@
+{
+  "categoryId": "103",
+  "categoryImage": "/assets/win-images/win.jpg",
+  "categoryName": "Winter Essentials",
+  "products": [
+    {
+      "id": "1",
+      "imageUrl": "/assets/win-images/win1.jpeg",
+      "name": "Flasks",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/win-images/win2.jpeg",
+      "name": "Blankets",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/win-images/win3.jpeg",
+      "name": "Pressure Cookers",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/win-images/win4.jpeg",
+      "name": "Mugs",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/win-images/win5.jpeg",
+      "name": "Carpet Rugs",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/win-images/win6.jpeg",
+      "name": "Mats",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "7",
+      "imageUrl": "/assets/win-images/win7.jpeg",
+      "name": "Bed Linen & Blankets",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "8",
+      "imageUrl": "/assets/win-images/win8.jpeg",
+      "name": "Cookware",
+      "percentageText": "Min 30% Off"
+    }
+  ]
+}

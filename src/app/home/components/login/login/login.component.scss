@@ -1,0 +1,40 @@
+.login-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+
+  .login-first {
+    width: 40%;
+    padding: 30px;
+    background-color: #2874f0;
+    color: white;
+    .login-first-title {
+      font-size: 28px;
+      font-weight: 500;
+    }
+    .login-first-msg {
+      margin-top: 16px;
+    }
+  }
+  .login-content {
+    width: 60%;
+    padding: 30px;
+
+    .login-content-field {
+      width: 100%;
+    }
+
+    // .login-content-common {
+    //   // width: 100%;
+    //   // border: 1px solid red;
+    // }
+    .login-content-btn {
+      width: 100%;
+    }
+    .login-content-btn-otp {
+      color: #2874f0;
+      background-color: #ffff;
+      width: 100%;
+    }
+  }
+}
