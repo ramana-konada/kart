@@ -1,0 +1,17 @@
+<!-- <p>mobiles works!</p> -->
+
+<div class="mob-container" *ngFor="let item of itemList">
+  <div class="mob-container-list" [routerLink]="'/mobile/'+ item.brand">
+    <img [src]="item.avatar">
+    <div>
+      <div>{{item.speciality}}</div>
+      <div>{{item.model}}</div>
+      <div>{{item.price}}</div>
+      <div>{{item.features.display}}</div>
+      <div>{{item.features.battery}}</div>
+      <!-- <div>{{item.features.cam}}</div> -->
+    </div>
+  </div>
+</div>
+
+<!-- <div class="check"></div> -->

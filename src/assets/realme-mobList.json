@@ -1,0 +1,44 @@
+[
+  {
+    "mobile": {
+      "image": "/assets/mob-images/realme-images/realme-img1.jpeg",
+      "brand": "realme C30s(Stipe Blue,32GB)",
+      "storage": "2GB RAM | 32GB | Expandable Upto 1 TB",
+      "display": "16.51cm HD+ Display ",
+      "camera": "8MP Rear Camera | 5MP Front Camera",
+      "battery": "5000mAh Lithium Polymer Battery"
+    },
+    "rating": 4.3,
+    "review": 646,
+    "price": "6999",
+    "discount": "30"
+  },
+  {
+    "mobile": {
+      "image": "/assets/mob-images/realme-images/realme-img2.jpeg",
+      "brand": "realme C30s(Stipe Black,32GB)",
+      "storage": "2GB RAM | 32GB | Expandable Upto 1 TB",
+      "display": "16.51cm HD+ Display ",
+      "camera": "8MP Rear Camera | 5MP Front Camera",
+      "battery": "5000mAh Lithium Polymer Battery"
+    },
+    "rating": 4.3,
+    "review": 646,
+    "price": "6999",
+    "discount": "30"
+  },
+  {
+    "mobile": {
+      "image": "/assets/mob-images/realme-images/realme-img3.jpeg",
+      "brand": "realme C30s(Stipe Blue,32GB)",
+      "storage": "2GB RAM | 32GB | Expandable Upto 1 TB",
+      "display": "16.51cm HD+ Display ",
+      "camera": "8MP Rear Camera | 5MP Front Camera",
+      "battery": "5000mAh Lithium Polymer Battery"
+    },
+    "rating": 4.1,
+    "review": 841,
+    "price": "8499",
+    "discount": "29"
+  }
+]

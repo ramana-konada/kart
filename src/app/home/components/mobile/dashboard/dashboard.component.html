@@ -1,0 +1,21 @@
+<!-- <p>dashboard works!</p> -->
+<div style="width:100%"></div>
+<div class="dashBoard" *ngFor="let item of mobileFeed">
+  <div>
+    <img [src]="item.mobile.image">
+  </div>
+  <div>
+    <div>{{item.mobile.brand}}</div>
+    <div>{{item.review}}</div>
+    <div>{{item.rating}}</div>
+    <div>{{item.mobile.storage}}</div>
+    <div>{{item.mobile.display}}</div>
+    <div>{{item.mobile.camera}}</div>
+    <div>{{item.mobile.battery}}</div>
+  </div>
+  <div>
+    <div>{{item.price}}</div>
+    <div>{{item.discount}}</div>
+  </div>
+
+</div>

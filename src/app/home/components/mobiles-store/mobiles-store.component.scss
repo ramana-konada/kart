@@ -1,0 +1,15 @@
+// .check {
+//   border: 2px solid red;
+//   background-color: yellow;
+//   height: 300px;
+//   width: 300px;
+// }
+
+.mob-container {
+  // width: 100%;
+  display: inline-block;
+  &-list {
+    display: flex;
+    align-items: center;
+  }
+}

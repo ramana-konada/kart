@@ -1,0 +1,10 @@
+<!-- <h1>route to header,menu-header</h1> -->
+<app-header></app-header>
+
+<!-- <app-menu-header></app-menu-header><br><br><br><br> -->
+<ng-container *ngIf="loadingState$ | async as s">
+  <mat-spinner *ngIf="s"></mat-spinner>
+</ng-container>
+<!-- <app-products></app-products> -->
+
+<router-outlet></router-outlet>

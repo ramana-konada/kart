@@ -1,0 +1,63 @@
+{
+  "categoryId": "104",
+  "categoryImage": "/assets/beauty/imgh0.jpg",
+  "categoryName": "Sports,Health & more",
+  "products": [
+    {
+      "id": "1",
+      "imageUrl": "/assets/sports-images/spo.jpeg",
+      "name": "Food Spreads",
+      "percentageText": "Upto 75% Off",
+      "availableBrands": ["Myfiness", "Alpino", "& More"]
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/sports-images/spo1.jpeg",
+      "name": "Car Lubricant",
+      "percentageText": "Upto 45% Off",
+      "availableBrands": ["Mobil", "Castrol", "& More"]
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/sports-images/spo2.jpeg",
+      "name": "Premimum Footballs",
+      "percentageText": "Upto 60% Off",
+      "availableBrands": ["Nivia", "Cosco", "& more"]
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/sports-images/spo3.jpeg",
+      "name": "Tea Powder",
+      "percentageText": "Upto 75% Off",
+      "availableBrands": ["Tata", "Lipton", "& More"]
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/sports-images/spo4.jpeg",
+      "name": "Ultra Premium Racquets",
+      "percentageText": "Upto 40% Off",
+      "availableBrands": ["Li-ning", "Adrenex", "& more"]
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/sports-images/spo5.jpeg",
+      "name": "Oral Care",
+      "percentageText": "Upto 40% Off",
+      "availableBrands": ["Colagate", "LISTERINE", "& More"]
+    },
+    {
+      "id": "7",
+      "imageUrl": "/assets/sports-images/spo6.jpeg",
+      "name": "Feeding & Nursing",
+      "percentageText": "Upto 50% Off",
+      "availableBrands": ["Breast", "Pumps", "& More"]
+    },
+    {
+      "id": "8",
+      "imageUrl": "/assets/sports-images/spo7.jpeg",
+      "name": "Men's Grooming",
+      "percentageText": "Upto 40% Off",
+      "availableBrands": ["Ustraa", "Gillette", "&More"]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+.mob-container {
+  display: flex;
+  gap: 20px;
+  background-color: #e4e7ed;
+  &-fil {
+    // width: 20%;
+    background-color: #ffffff;
+    // border: 2px solid red;
+    margin: 20px 0px 20px 30px;
+    width: 18%;
+    height: auto;
+  }
+  &-dash {
+    // width: 80%;
+    background-color: #ffffff;
+    margin: 20px 30px 20px 0px;
+
+    width: 78%;
+    height: auto;
+  }
+}

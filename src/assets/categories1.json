@@ -1,0 +1,55 @@
+{
+  "categoryId": "102",
+  "categoryImage": "assets/beauty/imgh0.jpg",
+  "categoryName": "Festive Specials, Curated For You!",
+  "products": [
+    {
+      "id": "1",
+      "imageUrl": "/assets/fes-images/fes4.jpg",
+      "name": "Women's Sarees",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/fes-images/fes3.jpeg",
+      "name": "Women's Kurtas",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/fes-images/fes2.jpeg",
+      "name": "Women's Dupattas",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/fes-images/fes5.jpeg",
+      "name": "Women's Ethinc Sets",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/fes-images/fes6.jpeg",
+      "name": "Toran",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/fes-images/fes7.jpeg",
+      "name": "Women's Blouse",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "7",
+      "imageUrl": "/assets/fes-images/fes8.jpeg",
+      "name": "Cups & Saucers",
+      "percentageText": "Min 50% Off"
+    },
+    {
+      "id": "8",
+      "imageUrl": "/assets/fes-images/fes1.jpg",
+      "name": "Plates",
+      "percentageText": "Min 40% Off"
+    }
+  ]
+}

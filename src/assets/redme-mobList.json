@@ -1,0 +1,44 @@
+[
+  {
+    "mobile": {
+      "image": "/assets/mob-images/redme-images/redme-img1.jpeg",
+      "brand": "REDMI 10(Caribbean Green,64GB)",
+      "storage": "4GB RAM | 64GB | Expandable Upto 1 TB",
+      "display": "17.02cm HD+ Display ",
+      "camera": "50MP+2MP | 5MP Front Camera",
+      "battery": "6000mAh Lithium Polymer Battery"
+    },
+    "rating": 4.3,
+    "review": 138236,
+    "price": "9999",
+    "discount": "33"
+  },
+  {
+    "mobile": {
+      "image": "/assets/mob-images/redme-images/redme-img2.jpeg",
+      "brand": "REDMI 10(Caribbean Green,128GB)",
+      "storage": "6GB RAM | 128GB | Expandable Upto 1 TB",
+      "display": "17.02cm HD+ Display ",
+      "camera": "50MP+2MP | 5MP Front Camera",
+      "battery": "6000mAh Lithium Polymer Battery"
+    },
+    "rating": 4.3,
+    "review": 138236,
+    "price": "11999",
+    "discount": "33"
+  },
+  {
+    "mobile": {
+      "image": "/assets/mob-images/redme-images/redme-img3.jpeg",
+      "brand": "REDMI 10(Pacific Blue,64GB)",
+      "storage": "4GB RAM | 64GB | Expandable Upto 1 TB",
+      "display": "17.02cm HD+ Display ",
+      "camera": "50MP+2MP | 5MP Front Camera",
+      "battery": "6000mAh Lithium Polymer Battery"
+    },
+    "rating": 4.3,
+    "review": 138236,
+    "price": "9999",
+    "discount": "33"
+  }
+]

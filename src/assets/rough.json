@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "imageUrl": "assets/imgh1.jpeg",
+    "name": "Cricket Football & more",
+    "percentageText": "Upto 70% Off",
+    "availableBrands": ["puma", "adidas", "nike"]
+  },
+  {
+    "id": "2",
+    "imageUrl": "assets/imgh2.jpeg",
+    "name": "Car pressure washer",
+    "percentageText": "Upto 65% Off",
+    "availableBrands": ["Bosch", "Black", "&more"]
+  },
+  {
+    "id": "3",
+    "imageUrl": "assets/imgh3.jpeg",
+    "name": "Fiction Books",
+    "percentageText": "Upto 70% Off",
+    "availableBrands": "Shop Now!"
+  },
+  {
+    "id": "4",
+    "imageUrl": "assets/imgh4.jpeg",
+    "name": "Remote Control Toys",
+    "percentageText": "Upto 80% Off",
+    "availableBrands": "Buy Now!"
+  },
+  {
+    "id": "5",
+    "imageUrl": "assets/imgh5.jpeg",
+    "name": "Studio Headphones",
+    "percentageText": "Upto 80% Off",
+    "availableBrands": "Explore Now!"
+  },
+  {
+    "id": "6",
+    "imageUrl": "assets/imgh6.jpeg",
+    "name": "Gym Essentials",
+    "percentageText": "From 139",
+    "availableBrands": "Shop Now!"
+  },
+  {
+    "id": "7",
+    "imageUrl": "assets/imgh7.jpeg",
+    "name": "Cycles Accesiories",
+    "percentageText": "From 125",
+    "availableBrands": "Best Deals"
+  },
+  {
+    "id": "8",
+    "imageUrl": "assets/imgh8.jpeg",
+    "name": "Car Lubricant",
+    "percentageText": "Upto 45% Off",
+    "availableBrands": ["Mobil", "Shell", "&Castrol"]
+  }
+]
