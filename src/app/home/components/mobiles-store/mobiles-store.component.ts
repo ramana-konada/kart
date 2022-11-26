@@ -1,24 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { KmobileService } from '../../services/kmobile/kmobile.service';
+import { Component, OnInit } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { IMobileStoreModal } from "../../modals/mobile-store.modal";
+import { KmobileService } from "../../services/kmobile/kmobile.service";
+import { loadMobileStore } from "../../store/actions/mobile.action";
+import { getMobileStoreState } from "../../store/selectors/mobile.selector";
 
 @Component({
-  selector: 'app-mobiles-store',
-  templateUrl: './mobiles-store.component.html',
-  styleUrls: ['./mobiles-store.component.scss'],
+  selector: "app-mobiles-store",
+  templateUrl: "./mobiles-store.component.html",
+  styleUrls: ["./mobiles-store.component.scss"],
 })
 export class MobilesStoreComponent implements OnInit {
-  itemList: Array<{
-    model: string;
-    avatar: string;
-    speciality: string;
-    brand: string;
-    price: number;
-    features: { display: string; battery?: string; cam?: string };
-  }> = [];
-  constructor(private kmobileService: KmobileService) {}
+  itemList?: IMobileStoreModal[];
+  constructor(private kmobileService: KmobileService, private store: Store) {}
 
   ngOnInit(): void {
-    this.kmobileService.getMobiles().subscribe((s) => {
+    // this.kmobileService.getMobiles().subscribe((s) => {
+    //   this.itemList = s;
+    // });
+
+    this.store.dispatch(loadMobileStore());
+    this.store.select(getMobileStoreState).subscribe((s) => {
+      console.log(s);
       this.itemList = s;
     });
   }

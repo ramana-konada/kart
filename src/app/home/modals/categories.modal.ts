@@ -62,9 +62,13 @@ export interface ICategoriesModal {
 // var stueis: string | number = '';
 // stueis = 0;
 
-// const keyName = 'potatao';
-// const pINfo: { name: string; [id: string]: any } = {
-//   name: '',
-//   bodies: '',
-//   [keyName]: 10,
-// };
+const keyName = "potatao";
+const pINfo: { name: string; [id: string]: any } = {
+  name: "",
+  bodies: "",
+  [keyName]: 10,
+};
+
+const { name } = pINfo;
+
+const [x, y] = [10, 20];
