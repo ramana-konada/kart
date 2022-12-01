@@ -1,10 +1,12 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { includes } from 'lodash';
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { includes } from "lodash";
+import { selectPriceFilter } from "src/app/admin/store/admin.selector";
 
 @Component({
-  selector: 'app-filter',
-  templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.scss'],
+  selector: "app-filter",
+  templateUrl: "./filter.component.html",
+  styleUrls: ["./filter.component.scss"],
 })
 export class FilterComponent implements OnInit {
   @Output() onFilterUpdate = new EventEmitter<any>();
@@ -22,9 +24,11 @@ export class FilterComponent implements OnInit {
     battery: 7000,
   };
 
-  constructor() {}
+  constructor(private store: Store) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.store.select(selectPriceFilter).subscribe((s) => console.log(s));
+  }
 
   customerRatingChange(event: any, value: number): void {
     if (event.target.checked) {
@@ -38,12 +42,12 @@ export class FilterComponent implements OnInit {
   }
 
   customerPriceChange(eventRef: any, type: string): void {
-    if (type === 'min') {
+    if (type === "min") {
       this.filter = {
         ...this.filter,
         minPrice: parseInt(eventRef.target.value),
       };
-    } else if (type === 'max') {
+    } else if (type === "max") {
       this.filter = {
         ...this.filter,
         maxPrice: parseInt(eventRef.target.value),

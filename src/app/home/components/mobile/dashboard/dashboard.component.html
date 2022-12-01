@@ -1,6 +1,7 @@
 <!-- <p>dashboard works!</p> -->
 <div style="width:100%"></div>
-<div class="dashBoard" *ngFor="let item of mobileFeed">
+<div *ngFor="let item of mobileFeed" class="dashBoard" [routerLink]="['/mobile-detail']">
+  <!-- <div class="dashBoard" *ngFor="let detail of mobileDetailList" [routerLink]="'/mobile/'+detail.brand"> -->
   <div>
     <img [src]="item.mobile.image">
   </div>
@@ -16,6 +17,7 @@
   <div>
     <div>{{item.price}}</div>
     <div>{{item.discount}}</div>
+    <!-- </div> -->
   </div>
 
 </div>

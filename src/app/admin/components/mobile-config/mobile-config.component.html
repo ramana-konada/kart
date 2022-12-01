@@ -1,0 +1,13 @@
+<!-- <p>mobile-config works!</p> -->
+<div class="price">
+  <mat-form-field appearance="fill">
+    <mat-label>Mobile Pricings</mat-label>
+    <mat-select [formControl]="price" multiple>
+      <mat-option *ngFor="let price of priceList" [value]="price">{{price}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button (click)="onSave()">save</button>
+</div>
+
+
+<!-- <router-outlet></router-outlet> -->
