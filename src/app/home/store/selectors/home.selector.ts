@@ -1,7 +1,12 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { IHomeState } from '../states/home.state';
+import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { IKartState } from "../reducers/kart-bundle.reducer";
+import { IHomeState } from "../states/home.state";
 
-export const selectHomeFeature = createFeatureSelector<IHomeState>('kart');
+export const selectKartFeature = createFeatureSelector<IKartState>("kart");
+
+export const selectHomeFeature = createSelector(selectKartFeature, (state) => {
+  return state.home;
+});
 
 export const getMenuState = createSelector(selectHomeFeature, (state) => {
   return state.menus;
