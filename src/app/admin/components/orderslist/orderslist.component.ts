@@ -6,6 +6,8 @@ import { CellClickedEvent, ColDef, GridReadyEvent } from "ag-grid-community";
 import { Observable } from "rxjs";
 import { loadOrderList } from "../../store/orderlist-store/orderlist.action";
 import { selectFeatureOrderList } from "../../store/orderlist-store/orderlist.selector";
+import { DatecellrendererComponent } from "./datecellrenderer/datecellrenderer.component";
+import { PricecellrendererComponent } from "./pricecellrenderer/pricecellrenderer.component";
 
 @Component({
   selector: "app-orderslist",
@@ -15,14 +17,14 @@ import { selectFeatureOrderList } from "../../store/orderlist-store/orderlist.se
 export class OrderslistComponent implements OnInit {
   // Each Column Definition results in one Column.
   public columnDefs: ColDef[] = [
-    { field: "userName" },
+    { field: "userName", pinned: "left" },
     { field: "productName" },
     { field: "productId" },
     { field: "productMfgDate" },
-    { field: "productPrice" },
-    { field: "userAddress" },
+    { field: "productPrice", cellRenderer: PricecellrendererComponent },
+    { field: "userAddress", width: 300 },
     { field: "orderNumber" },
-    { field: "orderDate" },
+    { field: "orderDate", cellRenderer: DatecellrendererComponent },
     { field: "orderDispatchDate" },
     { field: "orderStatus" },
   ];
@@ -31,6 +33,7 @@ export class OrderslistComponent implements OnInit {
   public defaultColDef: ColDef = {
     sortable: true,
     filter: true,
+    editable: true,
   };
 
   // Data that gets displayed in the grid
