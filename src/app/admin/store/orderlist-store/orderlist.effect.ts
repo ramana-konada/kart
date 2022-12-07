@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { createEffects } from "@ngrx/effects/src/effects_module";
-import { map, switchMap } from "rxjs";
+import { forkJoin, map, switchMap } from "rxjs";
 import { loadOrderList, loadOrderListSuccess } from "./orderlist.action";
 
 @Injectable()
@@ -12,9 +12,14 @@ export class OrderListEffect {
   loadOrdersList$ = createEffect((): any =>
     this.actions$.pipe(
       ofType(loadOrderList),
-      switchMap(() => this.http.get("./assets/orders.json")),
+      switchMap(() =>
+        forkJoin([
+          this.http.get("./assets/orders.json"),
+          this.http.get("./assets/grid.json"),
+        ])
+      ),
       map((s: any) => {
-        return loadOrderListSuccess({ orders: s });
+        return loadOrderListSuccess({ orders: s[0], grid: s[1] });
       })
     )
   );

@@ -1,0 +1,66 @@
+[
+  {
+    "fieldName": "userName",
+    "dataType": "string",
+    "editable": true
+  },
+  {
+    "fieldName": "productName",
+    "dataType": "string",
+    "editable": true
+  },
+  {
+    "fieldName": "productId",
+    "dataType": "number",
+    "editable": true
+  },
+  {
+    "fieldName": "productMfgDate",
+    "dataType": "date",
+    "editable": true
+  },
+  {
+    "fieldName": "productPrice",
+    "dataType": "number",
+    "editable": true
+  },
+  {
+    "fieldName": "userAddress",
+    "dataType": "text",
+    "editable": true
+  },
+  {
+    "fieldName": "orderNumber",
+    "dataType": "number",
+    "editable": true
+  },
+  {
+    "fieldName": "orderDate",
+    "dataType": "string",
+    "editable": true
+  },
+  {
+    "fieldName": "orderDispatchDate",
+    "dataType": "string",
+    "editable": true
+  },
+  {
+    "fieldName": "orderStatus",
+    "dataType": "dropdown",
+    "editable": true,
+    "data": [
+      {
+        "id": "1",
+        "dataName": "pending"
+      },
+      {
+        "id": "2",
+        "dataName": "delivered"
+      },
+      {
+        "id": "3",
+        "dataName": "outfordeliver"
+      }
+    ]
+  }
+]

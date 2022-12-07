@@ -3,11 +3,12 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { AgGridAngular } from "ag-grid-angular";
 import { CellClickedEvent, ColDef, GridReadyEvent } from "ag-grid-community";
-import { Observable } from "rxjs";
+import { combineLatest } from "rxjs";
 import { loadOrderList } from "../../store/orderlist-store/orderlist.action";
-import { selectFeatureOrderList } from "../../store/orderlist-store/orderlist.selector";
-import { DatecellrendererComponent } from "./datecellrenderer/datecellrenderer.component";
-import { PricecellrendererComponent } from "./pricecellrenderer/pricecellrenderer.component";
+import {
+  selectFeatureGridList,
+  selectFeatureOrderList,
+} from "../../store/orderlist-store/orderlist.selector";
 import { TextCellEditorComponent } from "./text-cell-editor/text-cell-editor.component";
 
 @Component({
@@ -16,39 +17,34 @@ import { TextCellEditorComponent } from "./text-cell-editor/text-cell-editor.com
   styleUrls: ["./orderslist.component.scss"],
 })
 export class OrderslistComponent implements OnInit {
-  // Each Column Definition results in one Column.
-  public columnDefs: ColDef[] = [
-    { field: "userName", pinned: "left" },
-    {
-      field: "productName",
-      editable: true,
-      cellEditor: "agTextCellEditorComponent",
-      width: 300,
-    },
-    { field: "productId" },
-    { field: "productMfgDate" },
-    { field: "productPrice", cellRenderer: PricecellrendererComponent },
-    { field: "userAddress", width: 300 },
-    { field: "orderNumber" },
-    { field: "orderDate", cellRenderer: DatecellrendererComponent },
-    { field: "orderDispatchDate" },
-    { field: "orderStatus" },
-  ];
+  columnDefs: ColDef[] = [];
+  // [
+  //   { field: "userName", pinned: "left" },
+  //   {
+  //     field: "productName",
+  //     editable: true,
+  //     cellEditor: "agTextCellEditorComponent",
+  //     width: 300,
+  //   },
+  //   { field: "productId" },
+  //   { field: "productMfgDate" },
+  //   { field: "productPrice", cellRenderer: PricecellrendererComponent },
+  //   { field: "userAddress", width: 300 },
+  //   { field: "orderNumber" },
+  //   { field: "orderDate", cellRenderer: DatecellrendererComponent },
+  //   { field: "orderDispatchDate" },
+  //   { field: "orderStatus" },
+  // ];
 
-  // DefaultColDef sets props common to all Columns
-  public defaultColDef: ColDef = {
+  defaultColDef: ColDef = {
     sortable: true,
     filter: true,
     editable: true,
   };
 
-  // Data that gets displayed in the grid
-  // public rowData$!: Observable<any[]>;
-
-  public rowData: any;
+  rowData: any;
   components: object = {};
 
-  // For accessing the Grid's API
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
   constructor(private http: HttpClient, private store: Store) {
@@ -58,30 +54,44 @@ export class OrderslistComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // throw new Error("Method not implemented.");
     this.store.dispatch(loadOrderList());
-    // this.store.select(selectFeatureOrderList).subscribe((e) => {
-    //   console.log(e);
-    // });
   }
 
-  // Example load data from sever
   onGridReady(params: GridReadyEvent) {
-    // this.rowData$ = this.http.get<any[]>(
-    //   "https://www.ag-grid.com/example-assets/row-data.json"
-    // );
-
-    this.store.select(selectFeatureOrderList).subscribe((e: any) => {
-      console.log(e);
-      this.rowData = e;
+    combineLatest([
+      this.store.select(selectFeatureOrderList),
+      this.store.select(selectFeatureGridList),
+    ]).subscribe(([orders, gridInfo]) => {
+      this.rowData = orders;
+      this.columnDefs = gridInfo.map((s: any) => {
+        return {
+          field: s.fieldName,
+          editable: s.editable,
+          datatype: s.dataType,
+          cellEditor: "agTextCellEditorComponent",
+          width: this.getWidth(s.dataType),
+          rootObject: s,
+        };
+      });
     });
   }
-  // Example of consuming Grid Event
+
+  getWidth(datatype: string) {
+    if (datatype === "string") {
+      return 200;
+    } else if (datatype === "number") {
+      return 150;
+    } else if (datatype === "date") {
+      return 200;
+    } else {
+      return 300;
+    }
+  }
+
   onCellClicked(e: CellClickedEvent): void {
     console.log("cellClicked", e);
   }
 
-  // Example using Grid's API
   clearSelection(): void {
     this.agGrid.api.deselectAll();
   }

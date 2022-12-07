@@ -8,3 +8,10 @@ export const selectFeatureOrderList = createSelector(
     return state.orders;
   }
 );
+
+export const selectFeatureGridList = createSelector(
+  selectOrderList,
+  (state) => {
+    return state.grid;
+  }
+);
