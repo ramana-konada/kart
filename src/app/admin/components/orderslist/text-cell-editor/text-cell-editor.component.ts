@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ICellEditorAngularComp } from "ag-grid-angular";
 import { ICellEditorParams, ICellRendererParams } from "ag-grid-community";
+import { cloneDeep } from "lodash";
 
 @Component({
   selector: "app-text-cell-editor",
@@ -8,11 +9,14 @@ import { ICellEditorParams, ICellRendererParams } from "ag-grid-community";
   styleUrls: ["./text-cell-editor.component.scss"],
 })
 export class TextCellEditorComponent implements ICellEditorAngularComp {
-  params: any;
+  value: any;
+  colDef: any;
 
-  agInit(params: ICellEditorParams): void {
-    console.log(params.value);
-    this.params = params.value;
+  agInit(params: ICellEditorParams & any): void {
+    const newParam = cloneDeep(params);
+    this.value = newParam.value;
+    console.log(newParam.colDef);
+    this.colDef = newParam.colDef;
   }
 
   getValue() {}

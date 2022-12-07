@@ -1,1 +1,11 @@
-<input type="text" [(ngModel)]="params">
+<ng-container *ngIf="colDef?.datatype==='string'">
+  <input type="text" [(ngModel)]="value">
+</ng-container>
+
+<ng-container *ngIf="colDef?.datatype==='dropdown'">
+  <select>
+    <option *ngFor="let item of colDef?.rootObject?.data">
+      {{item.dataName}}
+    </option>
+  </select>
+</ng-container>

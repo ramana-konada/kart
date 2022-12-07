@@ -10,11 +10,12 @@ export const orderListReducer = createReducer(
       loading: false,
     };
   }),
-  on(loadOrderListSuccess, (state, { orders }) => {
+  on(loadOrderListSuccess, (state, { orders, grid }) => {
     return {
       ...state,
       loading: false,
       orders,
+      grid,
     };
   })
 );
