@@ -8,6 +8,7 @@ import { loadOrderList } from "../../store/orderlist-store/orderlist.action";
 import { selectFeatureOrderList } from "../../store/orderlist-store/orderlist.selector";
 import { DatecellrendererComponent } from "./datecellrenderer/datecellrenderer.component";
 import { PricecellrendererComponent } from "./pricecellrenderer/pricecellrenderer.component";
+import { TextCellEditorComponent } from "./text-cell-editor/text-cell-editor.component";
 
 @Component({
   selector: "app-orderslist",
@@ -18,7 +19,12 @@ export class OrderslistComponent implements OnInit {
   // Each Column Definition results in one Column.
   public columnDefs: ColDef[] = [
     { field: "userName", pinned: "left" },
-    { field: "productName" },
+    {
+      field: "productName",
+      editable: true,
+      cellEditor: "agTextCellEditorComponent",
+      width: 300,
+    },
     { field: "productId" },
     { field: "productMfgDate" },
     { field: "productPrice", cellRenderer: PricecellrendererComponent },
@@ -40,11 +46,16 @@ export class OrderslistComponent implements OnInit {
   // public rowData$!: Observable<any[]>;
 
   public rowData: any;
+  components: object = {};
 
   // For accessing the Grid's API
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
-  constructor(private http: HttpClient, private store: Store) {}
+  constructor(private http: HttpClient, private store: Store) {
+    this.components = {
+      agTextCellEditorComponent: TextCellEditorComponent,
+    };
+  }
 
   ngOnInit(): void {
     // throw new Error("Method not implemented.");

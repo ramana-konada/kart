@@ -8,15 +8,22 @@ import { adminInitialState } from "./store/admin.state";
 import { MatSelectModule } from "@angular/material/select";
 import { OrderslistComponent } from "./components/orderslist/orderslist.component";
 import { AgGridModule } from "ag-grid-angular";
-import { DatecellrendererComponent } from './components/orderslist/datecellrenderer/datecellrenderer.component';
-import { PricecellrendererComponent } from './components/orderslist/pricecellrenderer/pricecellrenderer.component';
+import { DatecellrendererComponent } from "./components/orderslist/datecellrenderer/datecellrenderer.component";
+import { PricecellrendererComponent } from "./components/orderslist/pricecellrenderer/pricecellrenderer.component";
+import { TextCellEditorComponent } from "./components/orderslist/text-cell-editor/text-cell-editor.component";
 
 const routes: Routes = [
   { path: "mobile-config", component: MobileConfigComponent },
   { path: "orderslist", component: OrderslistComponent },
 ];
 @NgModule({
-  declarations: [MobileConfigComponent, OrderslistComponent, DatecellrendererComponent, PricecellrendererComponent],
+  declarations: [
+    MobileConfigComponent,
+    OrderslistComponent,
+    DatecellrendererComponent,
+    PricecellrendererComponent,
+    TextCellEditorComponent,
+  ],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
