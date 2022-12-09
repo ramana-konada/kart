@@ -2,13 +2,20 @@ import { HttpClient } from "@angular/common/http";
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { AgGridAngular } from "ag-grid-angular";
-import { CellClickedEvent, ColDef, GridReadyEvent } from "ag-grid-community";
+import {
+  CellClickedEvent,
+  ColDef,
+  GridOptions,
+  GridReadyEvent,
+} from "ag-grid-community";
 import { combineLatest } from "rxjs";
 import { loadOrderList } from "../../store/orderlist-store/orderlist.action";
 import {
   selectFeatureGridList,
   selectFeatureOrderList,
 } from "../../store/orderlist-store/orderlist.selector";
+import { CustomPinnedRowRendererComponent } from "./custom-pinned-row-renderer/custom-pinned-row-renderer.component";
+import { PricecellrendererComponent } from "./pricecellrenderer/pricecellrenderer.component";
 import { TextCellEditorComponent } from "./text-cell-editor/text-cell-editor.component";
 
 @Component({
@@ -42,8 +49,11 @@ export class OrderslistComponent implements OnInit {
     editable: true,
   };
 
+  gridOptions: GridOptions = {};
+
   rowData: any;
   components: object = {};
+  outfordeliver: any;
 
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
@@ -55,6 +65,13 @@ export class OrderslistComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(loadOrderList());
+    this.gridOptions = {
+      onCellEditingStopped: (event) => {
+        console.log(event);
+        // this.rowData.node(id);
+      },
+      rowModelType: "clientSide",
+    };
   }
 
   onGridReady(params: GridReadyEvent) {
@@ -63,6 +80,13 @@ export class OrderslistComponent implements OnInit {
       this.store.select(selectFeatureGridList),
     ]).subscribe(([orders, gridInfo]) => {
       this.rowData = orders;
+
+      this.outfordeliver = this.rowData.filter(
+        (element: any) => element.orderStatus === "outfordeliver"
+      ).length;
+
+      console.log(this.outfordeliver);
+
       this.columnDefs = gridInfo.map((s: any) => {
         return {
           field: s.fieldName,
@@ -70,10 +94,25 @@ export class OrderslistComponent implements OnInit {
           datatype: s.dataType,
           cellEditor: "agTextCellEditorComponent",
           width: this.getWidth(s.dataType),
+          cellRenderer: this.getPrice(s.dataType),
           rootObject: s,
+          sort: s.fieldName === "productId" ? "desc" : null,
+          pinned: s.fieldName === "userName" ? "left" : null,
         };
       });
+      this.setBottomRow();
     });
+  }
+
+  setBottomRow() {
+    let count = 0;
+    let idCount = 0;
+    this.rowData.forEach((item: any) => {
+      count = count + parseInt(item.productPrice);
+      idCount = idCount + parseInt(item.orderNumber);
+    });
+    let row = { productPrice: count, orderNumber: idCount };
+    this.agGrid.api.setPinnedBottomRowData([row]);
   }
 
   getWidth(datatype: string) {
@@ -84,7 +123,13 @@ export class OrderslistComponent implements OnInit {
     } else if (datatype === "date") {
       return 200;
     } else {
-      return 300;
+      return 200;
+    }
+  }
+
+  getPrice(datatype: string): any {
+    if (datatype === "currency") {
+      return PricecellrendererComponent;
     }
   }
 

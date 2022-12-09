@@ -1,5 +1,4 @@
 import { createReducer, on } from "@ngrx/store";
-import { arraysAreNotAllowedInProps } from "@ngrx/store/src/models";
 import { setPriceFilter } from "./admin.action";
 import { adminInitialState, IAdminState } from "./admin.state";
 

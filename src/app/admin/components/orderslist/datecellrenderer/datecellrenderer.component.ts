@@ -14,7 +14,6 @@ export class DatecellrendererComponent implements ICellRendererAngularComp {
   public cellValue!: string;
 
   agInit(params: ICellRendererParams): void {
-    // throw new Error("Method not implemented.");
     // this.cellValue = moment().format("L");
     let d = params.value.split("-");
     let renderedDate = `${d[1] + "-" + d[0] + "-" + d[2]}`;
@@ -24,7 +23,6 @@ export class DatecellrendererComponent implements ICellRendererAngularComp {
   }
 
   refresh(params: ICellRendererParams<any, any>): boolean {
-    // throw new Error("Method not implemented.");
     this.cellValue;
     return true;
   }

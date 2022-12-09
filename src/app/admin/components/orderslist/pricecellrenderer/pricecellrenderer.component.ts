@@ -8,15 +8,6 @@ import { ICellRendererParams } from "ag-grid-community";
   styleUrls: ["./pricecellrenderer.component.scss"],
 })
 export class PricecellrendererComponent implements ICellRendererAngularComp {
-  //   agInit(params: ICellRendererParams<any, any>): void {
-  //     throw new Error("Method not implemented.");
-  //   }
-  //   refresh(params: ICellRendererParams<any, any>): boolean {
-  //     throw new Error("Method not implemented.");
-  //   }
-
-  //   ngOnInit(): void {}
-  // }
   public cellValue!: number;
 
   constructor() {}

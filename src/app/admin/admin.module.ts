@@ -11,6 +11,7 @@ import { AgGridModule } from "ag-grid-angular";
 import { DatecellrendererComponent } from "./components/orderslist/datecellrenderer/datecellrenderer.component";
 import { PricecellrendererComponent } from "./components/orderslist/pricecellrenderer/pricecellrenderer.component";
 import { TextCellEditorComponent } from "./components/orderslist/text-cell-editor/text-cell-editor.component";
+import { CustomPinnedRowRendererComponent } from './components/orderslist/custom-pinned-row-renderer/custom-pinned-row-renderer.component';
 
 const routes: Routes = [
   { path: "mobile-config", component: MobileConfigComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
     DatecellrendererComponent,
     PricecellrendererComponent,
     TextCellEditorComponent,
+    CustomPinnedRowRendererComponent,
   ],
   imports: [
     RouterModule.forChild(routes),
