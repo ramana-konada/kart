@@ -21,7 +21,7 @@
   },
   {
     "fieldName": "productPrice",
-    "dataType": "number",
+    "dataType": "currency",
     "editable": true
   },
   {
