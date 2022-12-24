@@ -109,7 +109,7 @@ export class OrderslistComponent implements OnInit {
     let idCount = 0;
     this.rowData.forEach((item: any) => {
       count = count + parseInt(item.productPrice);
-      idCount = idCount + parseInt(item.orderNumber);
+      idCount += parseInt(item.orderNumber);
     });
     let row = { productPrice: count, orderNumber: idCount };
     this.agGrid.api.setPinnedBottomRowData([row]);
