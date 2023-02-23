@@ -67,6 +67,7 @@ export class FilterComponent implements OnInit {
       this.onFilterUpdate.emit(this.filter);
     }
   }
+  
   checkedBattery(batteryRef: any, value: number) {
     if (batteryRef.target.checked) {
       this.filter = {
