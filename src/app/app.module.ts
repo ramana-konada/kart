@@ -27,10 +27,10 @@ const NGRXDevTools = environment.production
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule,
-    AdminModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HomeModule,
+    AdminModule,
     StoreModule.forRoot(
       { admin: adminReducer, order: orderListReducer },
       {
