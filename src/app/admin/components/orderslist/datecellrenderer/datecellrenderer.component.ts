@@ -16,6 +16,7 @@ export class DatecellrendererComponent implements ICellRendererAngularComp {
   agInit(params: ICellRendererParams): void {
     // this.cellValue = moment().format("L");
     let d = params.value.split("-");
+    console.log(d);
     let renderedDate = `${d[1] + "-" + d[0] + "-" + d[2]}`;
     // console.log(renderedDate);
     this.cellValue = moment(renderedDate).format("L");

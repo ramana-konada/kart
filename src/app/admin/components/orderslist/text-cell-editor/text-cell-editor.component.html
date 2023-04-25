@@ -3,24 +3,10 @@
 </ng-container>
 
 <ng-container *ngIf="colDef?.datatype==='dropdown'">
-  <!-- <select>
-    <option *ngFor="let item of colDef?.rootObject?.data">
-      {{item.dataName}}
-    </option>
-  </select> -->
   <mat-form-field appearance="fill">
     <mat-label>select order status</mat-label>
     <mat-select disableRipple>
       <mat-option *ngFor="let item of colDef?.rootObject?.data" value="{{item.id}}"> {{item.dataName}}</mat-option>
     </mat-select>
   </mat-form-field>
-
-
-
-  <!-- <mat-select disableRipple>
-    <mat-option value="1">Option 1</mat-option>
-    <mat-option value="2">Option 2</mat-option>
-    <mat-option value="3">Option 3</mat-option>
-  </mat-select> -->
-
 </ng-container>

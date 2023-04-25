@@ -5,13 +5,25 @@
         <span>Kkart</span>
         <span class="forPlus">Plus</span>
       </div>
-      <input class="forInputs" placeholder="Search for products, brands and more">
+      <input class="for-input" placeholder="Search for products, brands and more">
       <button class="for-login" (click)="openDialog()">Login</button>
       <!-- <button >Open dialog</button> -->
       <a class="for-links">Become a Seller</a>
       <a class="for-links">More</a>
       <a class="for-links">Cart</a>
+      <!-- <button class="for-login" (click)="openTranstations()"></button> -->
+      <!-- <nav>
+        <div class="languageOptions">
+          <select name="Languages" (change)="changeLang($event.target.value)">
+           <option *ngFor="let lang of languages" [value]="lang.value">
+            {{lang.viewValue}}
+          </option> 
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="ar">عربي</option>
+          </select>
+        </div>
+      </nav> -->
     </div>
-
   </mat-toolbar>
 </div>
