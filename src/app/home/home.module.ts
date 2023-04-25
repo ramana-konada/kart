@@ -23,6 +23,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { FormsModule } from "@angular/forms";
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
       { path: "mobile/:brand", component: MobileComponent },
       //   { path: 'menu_header', component: MenuHeaderComponent },
       { path: "mobile-detail", component: MobileDetailComponent },
+      { path: "products", component: ProductsComponent },
     ],
   },
 ];
@@ -66,6 +68,7 @@ const routes: Routes = [
     MatSliderModule,
     MatProgressSpinnerModule,
     MatSelectModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [],

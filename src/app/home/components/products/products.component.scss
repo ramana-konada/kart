@@ -9,8 +9,15 @@
 .forNum {
   font-size: 20px;
 }
+
 .firstScroll {
   display: flex;
   gap: 80px;
   justify-content: flex-end;
+}
+
+.common {
+  border: 1px solid red;
+  height: 350px;
+  margin-bottom: 10px;
 }

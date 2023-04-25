@@ -9,13 +9,17 @@ import { ProductsService } from "../../services/products/products.service";
 })
 export class ProductsComponent implements OnInit {
   productsList?: ICategoriesModal;
-
+  data: any;
   constructor(private productService: ProductsService) {}
 
   ngOnInit() {
     this.productService.getProducts().subscribe((s) => {
       console.log(s);
       this.productsList = s;
+    });
+
+    this.productService.obs$.subscribe((s) => {
+      this.data = s;
     });
   }
 }
